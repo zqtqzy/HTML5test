@@ -1,0 +1,24 @@
+/*body{*/
+    /*margin: 0;*/
+/*}*/
+/*.mg{*/
+    /*background-color: aqua;*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*margin: 100px;*/
+/*}*/
+body{
+    margin: 0;
+}
+.container{
+    margin: 10px;
+}
+.bd{
+    border-style:double;
+}
+.pd{
+    padding: 100px;
+}
+.content{
+    background-color: aqua;
+}

@@ -1,0 +1,30 @@
+/*p{*/
+    /*color: aqua;*/
+    /*text-align: center;*/
+/*}*/
+/*h3{*/
+    /*text-indent: -2em;*//*首行缩进*/
+    /*padding-left: 2em;*/
+/*}*/
+
+/*p{*/
+    /*padding-left: 2em;*/
+/*}*/
+
+/*#p1{*/
+    /*text-transform: capitalize;*/
+/*}*/
+/*#p2{*/
+    /*text-transform: lowercase;*/
+/*}*/
+/*#p3{*/
+    /*text-transform: uppercase;*/
+/*}*/
+
+/*p{*/
+    /*text-shadow: 5px 5px 1px #FF0000;/!*左 上 清晰 颜色*!/*/
+/*}*/
+p{
+    text-wrap: normal;
+    width: 100px;
+}

@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.container{
+    margin: 10px;
+}
+.bd{
+    border-style:double;
+}
+.pd{
+    padding: 100px;
+}
+.content{
+    background-color: aqua;
+}
+
+.container1{
+    margin: 10px;
+}
+.bd1{
+    border-style:double;
+}
+.pd1{
+    padding: 100px;
+}
+.content1{
+    background-color: aqua;
+}

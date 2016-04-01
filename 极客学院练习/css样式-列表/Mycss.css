@@ -1,0 +1,11 @@
+/*ul li{*/
+    /*/!*list-style: circle;*!/*/
+    /*list-style-image: url("1.jpg");*/
+/*}*/
+
+ul.ul1{
+    list-style-position: inside;
+}
+ul.ul2{
+    list-style-position: outside;
+}

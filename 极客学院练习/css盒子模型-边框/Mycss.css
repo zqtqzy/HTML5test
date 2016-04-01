@@ -1,0 +1,24 @@
+/*p{*/
+    /*border-style: double;*/
+    /*border-top-style: dashed;*/
+    /*border-left-style: dotted;*/
+    /*border-right-style: groove;*/
+    /*border-bottom-style: double;*/
+    /*border-width: 2px;*/
+    /*border-bottom-color: #ff19fc;*/
+/*}*/
+
+p{
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+    text-align: center;
+    border: 2px solid blue;
+}
+.cssid{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #ff1f2e;
+}

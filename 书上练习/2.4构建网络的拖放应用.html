@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/Users/zhouqitian/Desktop/HTML5+PHONEGAP源码/源码/C02/css/weibo.css">
+</head>
+<body>
+<!--*省略html结构代码，参看下载源码*-->
+</body>
+<script type="text/javascript">
+var textarea = document.querySelector('textarea');    //微博文本输入框元素
+var W_layer = document.querySelector('div.W_layer');  //图片上传提示层元素
+var W_close = document.querySelector('a.W_close');	  //提示层关闭按钮元素
+var W_add =  W_layer.querySelector('li.add');         //追加图片元素
+var W_list = W_add.parentNode;						  //图片列表容器元素
+var p_count = document.querySelector('i.J_count');    //图片数量元素
+function render_one(file) {
+	var reader;       //reader变量存放Filereader示例
+	if (file.type.toLowerCase().match(/image.*/)) {  //正则判断文件是否为图片
+		reader = new FileReader();   //实例化FileReader对象，用于读取文件数据
+		reader.addEventListener('load', function (e) {  //监听FileReader示例的load事件
+			 var li = document.createElement('li');  //创建上传图片容器
+			 li.className = 'pic';
+			 li.innerHTML = '<img src="' + e.target.result + '">';
+			 W_list.insertBefore(li, W_add);    //插入图片
+			 p_count.innerHTML = (p_count.innerHTML>>0) + 1;//更新图片数
+
+		});
+		reader.readAsDataURL(file);       //读取文件为DataURL
+	};
+}
+document.addEventListener('dragenter', function (e) {   //监听拖放文件进入元素
+	textarea.classList.add('textarea-enter');
+},false);
+document.addEventListener('dragover', function (e) {    //监听拖放文件在元素上移动
+	 e.preventDefault();      //阻止默认事件，确保drop触发
+},false);
+document.addEventListener('dragleave', function (e) {	//监听拖放文件离开元素
+	 textarea.classList.remove('textarea-enter'); 
+},false);
+document.addEventListener('drop', function (e) {
+	 e.preventDefault();
+	 W_layer.style.display = 'block';
+	 textarea.classList.remove('textarea-enter');
+	 var files = e.dataTransfer.files;  //获取文件列表
+	 for (var i = 0,l = files.length; i < 1; i++) {
+	  	render_one(files[i]); //页面构建每张上传图片
+	  } 
+},false);
+W_close.addEventListener('click', function (e) {  //监听浮层单击事件，执行关闭操作
+	 e.preventDefault();
+	 W_layer.style.display = 'none'; 
+},false);
+</script>
+</html>
