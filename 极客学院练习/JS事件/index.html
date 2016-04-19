@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Mycss.css">
+</head>
+<body onload="loadDemo()">
+    <!--<button onclick="demo()">按钮</button>-->
+    <!--<script>-->
+        <!--function demo(){-->
+            <!--alert("Hello");-->
+        <!--}-->
+    <!--</script>-->
+    <div class="div" onmouseover="onOver(this)" onmouseout="onOut(this)"></div>
+    <script>
+        function onOver(ooj){
+            ooj.innerHTML = "hello";
+        }
+        function onOut(ooj){
+            ooj.innerHTML = "world";
+        }
+    </script>
+    <form>
+        <input type="text" onchange="changeDemo(this)">
+        <input type="text" onfocus="foucusDemo(this)" onselect="">
+    </form>
+    <script>
+        function changeDemo(bg){
+            alert("hello change");
+        }
+        function foucusDemo(bg){
+            bg.style.background = "red";
+        }
+        function loadDemo(){
+            alert("load");
+        }
+    </script>
+</body>
+</html>

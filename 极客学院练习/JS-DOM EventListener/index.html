@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p id="pid">hello</p>
+    <button id="btn">按钮</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            alert("hello");
+        });
+        document.getElementById("btn").removeEventListener("click",function(){
+            alert("hello");
+        });
+    </script>
+</body>
+</html>

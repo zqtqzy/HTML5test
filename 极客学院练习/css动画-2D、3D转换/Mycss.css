@@ -1,0 +1,38 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: #000aff;
+}
+/*.div2{*/
+    /*transform: translate(100px,100px);*/
+    /*-webkit-transform: translate(100px,100px);/!* safari chrome*!/*/
+    /*-ms-transform: translate(100px,100px);/!*IE*!/*/
+    /*-o-transform: translate(100px,100px);/!*opera*!/*/
+    /*-moz-transform: translate(100px,100px);/!*FireFox*!/ */
+/*}*/
+/*.div2{*/
+    /*transform: rotate(200deg);*/
+    /*-webkit-transform: rotate(2000deg);*/
+/*}*/
+/*.div2{*/
+    /*margin: 100px;*/
+    /*-webkit-transform: scale(1, 2);*/
+    /*-moz-transform: scale(1, 2);*/
+    /*-ms-transform: scale(1, 2);*/
+    /*-o-transform: scale(1, 2);*/
+    /*transform: scale(1, 2);*/
+/*}*/
+/*.div2{*/
+    /*-webkit-transform: skew(20deg, 20deg);*/
+    /*-moz-transform: skew(50deg, 50deg);*/
+    /*-ms-transform: skew(50deg, 50deg);*/
+    /*-o-transform: skew(50deg, 50deg);*/
+    /*transform: skew(20deg, 20deg);*/
+/*}*/
+.div2{
+    -webkit-transform: rotateX(120deg);
+    -moz-transform: rotateX(100deg);
+    -ms-transform: rotateX(100deg);
+    -o-transform: rotateX(100deg);
+    transform: rotateX(120deg);
+}

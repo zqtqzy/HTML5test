@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="createClock()">
+    <!--创建对象-->
+    <script>
+//        people = new Object();
+//        people.name = "zhouqitian";
+//        people.age = "24";
+//        document.write("name:"+people.name+"<br/>"+"age:"+people.age);
+//        people = {name:"zhouqitian",age:"24"};
+//        document.write("name:"+people.name+"<br/>"+"age:"+people.age);
+//        function people(name,age){
+//            this.name = name;
+//            this.age = age;
+//        }
+//        son = new people("zhouqitian",24);
+//        document.write("name:"+son.name+"<br/>"+"age:"+son.age);
+
+    <!--String-->
+//        var str = "Hello World";
+//        var str1 = "hello,jike,xueyuan";
+////        document.write(str.length);//获取字符串长度
+////        document.write(str.indexOf("World"));//获取指定字符串位置
+////        document.write(str.match("World"));//匹配字符串，若存在，则打印；若不存在，则返回空
+////        document.write(str.replace("World","baidu"));//替换字符串
+////        document.write(str.toUpperCase());
+////        document.write(str.toLowerCase());//大小写转换
+//        var s = str1.split(",");
+//        document.write(s[1]);//字符串转化为数组
+        <!--Data-->
+//        var date = new Date();
+//        document.write(date);
+//        document.write(date.getFullYear());//获取当前年份
+//        document.write(date.getTime());//获取毫秒数
+//        date.setFullYear(2015,0,1);
+//        document.write(date);//设置年月日
+        //时钟
+        function createClock(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = checkTime(date.getMinutes());
+            var s = checkTime(date.getSeconds());
+            document.getElementById("timetext").innerHTML = h+":"+m+":"+s;
+            t = setTimeout(createClock,500);
+        }
+        function checkTime(i){
+            if(i<10){
+                i = "0" + i;
+            }
+            return i;
+        }
+    </script>
+    <div id="timetext"></div>
+</body>
+</html>

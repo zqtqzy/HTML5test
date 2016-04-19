@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn1">按钮</button>
+        <a id="aid" href="https://www.baidu.com">百度</a>
+    </div>
+    <!--<script>-->
+        <!--function demo(){-->
+            <!--alert("hello");-->
+        <!--}-->
+    <!--</script>-->
+    <!--<script>-->
+        <!--var btn1 = document.getElementById("btn1");-->
+        <!--btn1.onclick = function(){alert("hello");};-->
+        <!--btn1.onclick = function(){alert("hello1");};-->
+        <!--btn1.onclick = function(){alert("hello2");};-->
+<!--//        btn1.onclick = null;-->
+    <!--</script>-->
+    <!--<script>-->
+        <!--var btn1 = document.getElementById("btn1");-->
+        <!--btn1.addEventListener("click",demo1);-->
+        <!--btn1.addEventListener("click",demo2);-->
+        <!--function demo1(){alert("DOM二级事件处理程序")};-->
+        <!--function demo2(){alert("DOM二级事件处理程序2")};-->
+        <!--btn1.removeEventListener("click",demo1);-->
+    <!--</script>-->
+    <!--<script>-->
+        <!--var btn1 = document.getElementById("btn1");-->
+        <!--if(btn1.addEventListener){-->
+            <!--btn1.addEventListener("click",demo);-->
+        <!--}else if(btn1.attachEvent){-->
+            <!--btn1.attachEvent("onclick",demo);-->
+        <!--}else{-->
+            <!--btn1.onclick = demo();-->
+        <!--}-->
+        <!--function demo(){-->
+            <!--alert("hello")-->
+        <!--}-->
+    <!--</script>-->
+    <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click",showType);
+        var div = document.getElementById("div");
+        div.addEventListener("click",showDiv);
+        var a = document.getElementById("aid");
+        a.addEventListener("click",showA);
+        function showType(e){
+//            alert(e.type);
+            alert(e.target);
+            e.stopPropagation();//阻止事件冒泡
+        }
+        function showDiv(e){
+            e.target.style.width = "100px";
+            e.target.style.height = "100px";
+            e.target.style.backgroundColor = "red";
+        }
+        function showA(e){
+            e.stopPropagation();
+            e.preventDefault();//阻止事件默认行为
+        }
+    </script>
+</body>
+</html>

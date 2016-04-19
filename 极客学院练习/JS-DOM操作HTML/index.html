@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--<p id="pid">Hello</p>-->
+    <a href="https://www.baidu.com" id="aid">hello</a>
+    <button onclick="demo()">按钮</button>
+    <script>
+        //注意：绝对不要在文档加载完成后使用document.write（），这回覆盖该文档。
+        function demo(){
+            var nv;
+//            nv = document.getElementsByTagName("p");//相同元素中的第一个
+//            nv = document.getElementById("pid");
+//
+//            if (nv.innerHTML == "Hello"){
+//                nv.innerHTML = "World";
+//            }else{
+//                nv.innerHTML = "Hello";
+//            }
+            nv = document.getElementById("aid").href = "www.jikexueyuan.com";
+        }
+    </script>
+</body>
+</html>
